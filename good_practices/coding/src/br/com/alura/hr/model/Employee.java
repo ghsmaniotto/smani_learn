@@ -18,8 +18,8 @@ public class Employee {
 		this.salary = salary;
 	}
 
-	public void atualizarSalary(BigDecimal novoSalary) {
-		this.salary = novoSalary;
+	public void atualizarSalary(BigDecimal newSalary) {
+		this.salary = newSalary;
 		this.dateOfLastReajust = LocalDate.now();
 	}
 

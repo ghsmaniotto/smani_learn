@@ -1,9 +1,10 @@
-package br.com.alura.rh.model;
+package br.com.alura.rh.service;
 
 import java.math.BigDecimal;
 import java.math.RoundingMode;
 
 import br.com.alura.rh.ValidacaoException;
+import br.com.alura.rh.model.Funcionario;
 
 public class ReajusteService {
 

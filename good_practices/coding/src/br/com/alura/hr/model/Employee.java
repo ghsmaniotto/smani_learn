@@ -62,4 +62,8 @@ public class Employee {
 	public void setDateOfLastReajust(LocalDate dateOfLastReajust) {
 		this.dateOfLastReajust = dateOfLastReajust;
 	}
+
+  public void upgradeRole(Role nextRole) {
+		this.role = nextRole;
+  }
 }

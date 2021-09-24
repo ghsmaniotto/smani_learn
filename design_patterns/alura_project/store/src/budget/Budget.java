@@ -3,8 +3,8 @@ package budget;
 import java.math.BigDecimal;
 
 public class Budget {
-  BigDecimal value;
-  int itemsCount;
+  private BigDecimal value;
+  private int itemsCount;
 
   public Budget(BigDecimal value, int itemsCount) {
     this.value = value;
@@ -13,5 +13,9 @@ public class Budget {
 
   public BigDecimal getValue() {
     return value;
+  }
+
+  public int getItemsCount() {
+    return itemsCount;
   }
 }

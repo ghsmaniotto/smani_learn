@@ -1,8 +1,9 @@
 import java.math.BigDecimal;
 
 import budget.Budget;
+import tax.ICMS;
+import tax.ISS;
 import tax.TaxCalculator;
-import tax.TaxType;
 
 public class TaxCalculatorTest {
   
@@ -10,6 +11,7 @@ public class TaxCalculatorTest {
     Budget budget = new Budget(new BigDecimal("100.0"));
     TaxCalculator taxCalculator = new TaxCalculator();
 
-    System.out.println(taxCalculator.calculate(budget, TaxType.ISS));
+    System.out.println(taxCalculator.calculate(budget, new ICMS()));
+    System.out.println(taxCalculator.calculate(budget, new ISS()));
   }
 }

@@ -6,9 +6,11 @@ import discount.DiscountCalculator;
 public class DiscountCalculatorTest {
   
   public static void main(String[] args){
-    Budget budget = new Budget(new BigDecimal("100.0"), 6);
+    Budget first_budget = new Budget(new BigDecimal("100.0"), 4);
+    Budget second_budget = new Budget(new BigDecimal("1000.0"), 4);
     DiscountCalculator discountCalculator = new DiscountCalculator();
 
-    System.out.println(discountCalculator.calculate(budget));
+    System.out.println(discountCalculator.calculate(first_budget));
+    System.out.println(discountCalculator.calculate(second_budget));
   }
 }

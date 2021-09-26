@@ -10,7 +10,13 @@ public class NoDiscount extends Discount {
     super(null);
   }
   
-  public BigDecimal calculate(Budget budget) {
+  @Override
+  protected boolean mustApply(Budget budget) {
+    return true;
+  }
+
+  @Override
+  protected BigDecimal evaluateCalculation(Budget budget) {
     return BigDecimal.ZERO;
   }
 

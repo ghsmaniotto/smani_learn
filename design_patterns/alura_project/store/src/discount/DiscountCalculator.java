@@ -5,13 +5,13 @@ import java.math.BigDecimal;
 import budget.Budget;
 
 public class DiscountCalculator {
-
   public BigDecimal calculate(Budget budget){
-    return new MoreThanFiveItemsDiscount( 
+    Discount chainOfDiscounts = new MoreThanFiveItemsDiscount( 
       new ValueGreaterThanFiveHundredDiscount(
         new NoDiscount()
       )
-    ).calculate(budget);
+    );
+    
+    return chainOfDiscounts.calculate(budget);
   }
-
 }

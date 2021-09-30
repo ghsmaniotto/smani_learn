@@ -2,9 +2,9 @@ package order.actions;
 
 import order.Order;
 
-public class SendOrderEmail {
+public class SendOrderEmail implements ActionAfterCreateOrder {
 
-  public void execute(Order order) {
+  public void executeAction(Order order) {
     System.out.println("Send email to inform that the order" + order.toString() + " was created with success!");
   }
 

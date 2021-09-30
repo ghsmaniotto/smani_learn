@@ -2,9 +2,9 @@ package order.actions;
 
 import order.Order;
 
-public class PersistOrderOnDatabase {
+public class PersistOrderOnDatabase implements ActionAfterCreateOrder {
 
-  public void execute(Order order) {
+  public void executeAction(Order order) {
     System.out.println("Persist the order" + order.toString() + " on database!");
   }
 

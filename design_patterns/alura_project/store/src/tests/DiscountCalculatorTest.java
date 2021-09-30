@@ -1,3 +1,4 @@
+package tests;
 import java.math.BigDecimal;
 
 import budget.Budget;

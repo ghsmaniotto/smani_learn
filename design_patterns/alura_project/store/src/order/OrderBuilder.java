@@ -4,6 +4,8 @@ import java.math.BigDecimal;
 import java.time.LocalDateTime;
 
 import budget.Budget;
+import order.actions.PersistOrderOnDatabase;
+import order.actions.SendOrderEmail;
 
 public class OrderBuilder {
 
@@ -22,8 +24,7 @@ public class OrderBuilder {
 
     Order order = new Order(this.customer, LocalDateTime.now(), budget);
 
-    System.out.println(order.toString());
-    System.out.println("Persit order into the database");
-    System.out.println("Send email to customer warning new order");
+    new PersistOrderOnDatabase().execute(order);
+    new SendOrderEmail().execute(order);
   }
 }

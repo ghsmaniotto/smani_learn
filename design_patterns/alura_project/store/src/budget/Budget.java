@@ -3,6 +3,7 @@ package budget;
 import java.math.BigDecimal;
 
 import budget.status.BudgetStatus;
+import budget.status.Completed;
 
 public class Budget {
   private BigDecimal value;
@@ -30,6 +31,10 @@ public class Budget {
 
   public void complete() {
     this.status.complete(this);
+  }
+
+  public boolean isCompleted(){
+    return this.status instanceof Completed;
   }
 
   public BigDecimal getValue() {

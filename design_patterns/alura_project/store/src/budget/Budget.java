@@ -4,6 +4,7 @@ import java.math.BigDecimal;
 
 import budget.status.BudgetStatus;
 import budget.status.Completed;
+import budget.status.InAnalysis;
 
 public class Budget {
   private BigDecimal value;
@@ -13,6 +14,7 @@ public class Budget {
   public Budget(BigDecimal value, int itemsCount) {
     this.value = value;
     this.itemsCount = itemsCount;
+    this.status = new InAnalysis();
   }
 
   public void applyExtraDiscount() {

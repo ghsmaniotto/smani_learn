@@ -12,7 +12,7 @@ public class TaxCalculatorTest {
     Budget budget = new Budget(new BigDecimal("100.0"), 1);
     TaxCalculator taxCalculator = new TaxCalculator();
 
-    System.out.println(taxCalculator.calculate(budget, new ICMS()));
-    System.out.println(taxCalculator.calculate(budget, new ISS()));
+    System.out.println(taxCalculator.calculate(budget, new ICMS(new ISS(null))));
+    System.out.println(taxCalculator.calculate(budget, new ISS(null)));
   }
 }

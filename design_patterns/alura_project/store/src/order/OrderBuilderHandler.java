@@ -17,7 +17,8 @@ public class OrderBuilderHandler {
   }
 
   public void execute() {
-    Budget budget = new Budget(this.data.getBudgetValue(), this.data.getItemsCount());
+    Budget budget = new Budget();
+    data.getItems().forEach(item -> budget.addItem(item));
 
     Order order = new Order(this.data.getCustomer(), LocalDateTime.now(), budget);
 

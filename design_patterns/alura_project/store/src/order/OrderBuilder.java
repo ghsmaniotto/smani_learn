@@ -3,15 +3,15 @@ package order;
 import java.math.BigDecimal;
 import java.util.List;
 
-import budget.BudgetItem;
+import budget.Budgetable;
 
 public class OrderBuilder {
 
   private String customer;
   private BigDecimal budgetValue;
-  private List<BudgetItem> items;
+  private List<Budgetable> items;
 
-  public OrderBuilder(String customer, List<BudgetItem> items) {
+  public OrderBuilder(String customer, List<Budgetable> items) {
     this.customer = customer;
     this.items = items;
   }
@@ -28,12 +28,12 @@ public class OrderBuilder {
     return items.size();
   }
 
-  public void addItem(BudgetItem item){
+  public void addItem(Budgetable item){
     this.budgetValue.add(item.getValue());
     this.items.add(item);
   }
 
-  public List<BudgetItem> getItems(){
+  public List<Budgetable> getItems(){
     return items;
   }
 

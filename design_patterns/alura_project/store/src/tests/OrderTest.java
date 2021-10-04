@@ -5,6 +5,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 
 import budget.BudgetItem;
+import budget.Budgetable;
 import order.OrderBuilder;
 import order.OrderBuilderHandler;
 import order.actions.PersistOrderOnDatabase;
@@ -17,7 +18,7 @@ public class OrderTest {
     String customer = "Fulano";
     BigDecimal firstItem = new BigDecimal("150");
     BigDecimal secondItem = new BigDecimal("150");
-    ArrayList<BudgetItem> itemList = new ArrayList<BudgetItem>();
+    ArrayList<Budgetable> itemList = new ArrayList<Budgetable>();
     itemList.add(new BudgetItem(firstItem));
     itemList.add(new BudgetItem(secondItem));
 

@@ -1,6 +1,8 @@
 package budget;
 
 import java.math.BigDecimal;
+import java.util.ArrayList;
+import java.util.List;
 
 import budget.status.BudgetStatus;
 import budget.status.Completed;
@@ -8,12 +10,12 @@ import budget.status.InAnalysis;
 
 public class Budget {
   private BigDecimal value;
-  private int itemsCount;
   private BudgetStatus status;
+  private List<BudgetItem> items;
 
-  public Budget(BigDecimal value, int itemsCount) {
-    this.value = value;
-    this.itemsCount = itemsCount;
+  public Budget() {
+    this.value = BigDecimal.ZERO;
+    this.items = new ArrayList<BudgetItem>();
     this.status = new InAnalysis();
   }
 
@@ -35,7 +37,7 @@ public class Budget {
     this.status.complete(this);
   }
 
-  public boolean isCompleted(){
+  public boolean isCompleted() {
     return this.status instanceof Completed;
   }
 
@@ -44,7 +46,7 @@ public class Budget {
   }
 
   public int getItemsCount() {
-    return itemsCount;
+    return items.size();
   }
 
   public BudgetStatus getStatus() {
@@ -53,5 +55,10 @@ public class Budget {
 
   public void setStatus(BudgetStatus status) {
     this.status = status;
+  }
+
+  public void addItem(BudgetItem item) {
+    this.value.add(item.getValue());
+    this.items.add(item);
   }
 }

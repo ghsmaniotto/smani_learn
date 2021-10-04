@@ -1,4 +1,5 @@
 package tests;
+
 import java.math.BigDecimal;
 
 import budget.Budget;
@@ -7,8 +8,8 @@ import tax.ISS;
 import tax.TaxCalculator;
 
 public class TaxCalculatorTest {
-  
-  public static void main(String[] args){
+
+  public static void main(String[] args) {
     Budget budget = new Budget();
     budget.addItem(new budget.BudgetItem(new BigDecimal("100.0")));
     TaxCalculator taxCalculator = new TaxCalculator();

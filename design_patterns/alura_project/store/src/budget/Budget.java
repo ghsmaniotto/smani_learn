@@ -58,7 +58,7 @@ public class Budget {
   }
 
   public void addItem(BudgetItem item) {
-    this.value.add(item.getValue());
+    this.value = this.value.add(item.getValue());
     this.items.add(item);
   }
 }

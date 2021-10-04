@@ -8,14 +8,14 @@ import budget.status.BudgetStatus;
 import budget.status.Completed;
 import budget.status.InAnalysis;
 
-public class Budget {
+public class Budget implements Budgetable {
   private BigDecimal value;
   private BudgetStatus status;
-  private List<BudgetItem> items;
+  private List<Budgetable> items;
 
   public Budget() {
     this.value = BigDecimal.ZERO;
-    this.items = new ArrayList<BudgetItem>();
+    this.items = new ArrayList<Budgetable>();
     this.status = new InAnalysis();
   }
 
@@ -57,7 +57,7 @@ public class Budget {
     this.status = status;
   }
 
-  public void addItem(BudgetItem item) {
+  public void addItem(Budgetable item) {
     this.value = this.value.add(item.getValue());
     this.items.add(item);
   }

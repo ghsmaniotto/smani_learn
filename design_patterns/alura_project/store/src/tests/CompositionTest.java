@@ -3,6 +3,7 @@ package tests;
 import java.math.BigDecimal;
 
 import budget.Budget;
+import budget.BudgetProxy;
 import budget.BudgetItem;
 
 public class CompositionTest {
@@ -16,7 +17,11 @@ public class CompositionTest {
     newBudget.addItem(new BudgetItem(new BigDecimal("500.0")));
     newBudget.addItem(oldBudget);
 
-    System.out.println(newBudget.getValue());
+    BudgetProxy proxy = new BudgetProxy(newBudget);
+
+    System.out.println(proxy.getValue());
+    System.out.println(proxy.getValue());
+    System.out.println(proxy.getValue());
   }
   
 }

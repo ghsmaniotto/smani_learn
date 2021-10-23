@@ -11,4 +11,8 @@ public class CPF {
     this.number = number;
   }
 
+  public String getNumber(){
+    return this.number;
+  }
+
 }

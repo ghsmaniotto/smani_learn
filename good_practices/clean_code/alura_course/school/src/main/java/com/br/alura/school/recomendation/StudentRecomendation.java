@@ -1,16 +1,16 @@
-package com.br.alura.school;
+package com.br.alura.school.recomendation;
 
 import java.time.LocalDateTime;
 
 import com.br.alura.school.student.Student;
 
-public class CustomerRecomendation {
+public class StudentRecomendation {
 
   private Student indicated;
   private Student whoIndicate;
   private LocalDateTime createdAt;
 
-  public CustomerRecomendation(Student indicated, Student whoIndicate){
+  public StudentRecomendation(Student indicated, Student whoIndicate){
     this.indicated = indicated;
     this.whoIndicate = whoIndicate;
     this.createdAt = LocalDateTime.now();

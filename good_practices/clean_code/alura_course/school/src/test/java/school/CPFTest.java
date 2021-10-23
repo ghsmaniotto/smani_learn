@@ -9,8 +9,8 @@ import org.junit.jupiter.api.Test;
 class CPFTest {
 
   @Test
-  void mustNotCreateEmailWithInvalidAddress() {
-    String errorMessage = "CPF inválido";
+  void mustNotCreateCPFWithInvalidNumber() {
+    String errorMessage = "Invalid CPF";
 
     assertThrows(IllegalArgumentException.class, () -> new CPF(null), errorMessage);
 
@@ -20,7 +20,7 @@ class CPFTest {
   }
 
   @Test
-  void mustCreateEmailWithValidAddress() {
+  void mustCreateCPFWithValidNumber() {
     final String validCpf = "123.123.123-12";
 
     assertDoesNotThrow(() -> new CPF(validCpf));

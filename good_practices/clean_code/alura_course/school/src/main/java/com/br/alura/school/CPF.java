@@ -5,7 +5,7 @@ public class CPF {
 
   public CPF(String  number){
     if(number == null || !number.matches("[0-9]{3}\\.?[0-9]{3}\\.?[0-9]{3}\\-?[0-9]{2}")){
-      throw new IllegalArgumentException("CPF inválido");
+      throw new IllegalArgumentException("Invalid CPF");
     }
 
     this.number = number;

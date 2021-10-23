@@ -1,4 +1,4 @@
-package com.br.alura.school;
+package com.br.alura.school.student;
 
 public class Phone {
 

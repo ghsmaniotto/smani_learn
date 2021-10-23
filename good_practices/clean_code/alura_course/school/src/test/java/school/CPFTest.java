@@ -2,7 +2,7 @@ package school;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-import com.br.alura.school.CPF;
+import com.br.alura.school.student.CPF;
 
 import org.junit.jupiter.api.Test;
 

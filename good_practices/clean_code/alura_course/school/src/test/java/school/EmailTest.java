@@ -2,7 +2,7 @@ package school;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-import com.br.alura.school.Email;
+import com.br.alura.school.student.Email;
 
 import org.junit.jupiter.api.Test;
 

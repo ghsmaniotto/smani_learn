@@ -28,16 +28,21 @@ class PhoneTest {
     assertThrows(IllegalArgumentException.class, () -> new Phone("99", ""), errorMessage);
 
     assertThrows(IllegalArgumentException.class, () -> new Phone("99", "invalid_number"), errorMessage);
+
+    assertThrows(IllegalArgumentException.class, () -> new Phone("99", "9999999"), errorMessage);
+    assertThrows(IllegalArgumentException.class, () -> new Phone("99", "9999999999"), errorMessage);
   }
 
   @Test
   void mustCreatePhoneWithValidAttributes() {
     final String validDDD = "55";
-    final String validNumber = "999009900";
-    final String formattedPhone = "(" + validDDD + ") " + validNumber;
+    final String validNineNumber = "999999999";
+    final String validEigthNumber = "99999999";
+    final String formattedPhone = "(" + validDDD + ") " + validNineNumber;
 
-    assertDoesNotThrow(() -> new Phone(validDDD, validNumber));
+    assertDoesNotThrow(() -> new Phone(validDDD, validNineNumber));
+    assertDoesNotThrow(() -> new Phone(validDDD, validEigthNumber));
 
-    assertEquals(new Phone(validDDD, validNumber).getFormattedPhone(), formattedPhone);
+    assertEquals(new Phone(validDDD, validNineNumber).getFormattedPhone(), formattedPhone);
   }
 }

@@ -25,12 +25,12 @@ public class Student {
     return this.name;
   }
 
-  public CPF getCpf(){
-    return this.cpf;
+  public String getCpf(){
+    return this.cpf.getNumber();
   }
 
-  public Email getEmail(){
-    return this.email;
+  public String getEmail(){
+    return this.email.getAddreess();
   }
 
   public List<Phone> getPhones(){

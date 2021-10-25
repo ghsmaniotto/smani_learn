@@ -17,7 +17,14 @@ public class Phone {
   public String getFormattedPhone(){
     return "(" + this.ddd + ") " + this.number;
   }
-  
+
+  public String getDDD(){
+    return this.ddd;
+  }
+
+  public String getNumber(){
+    return this.number;
+  } 
 }
 
 final class ValidatePhoneAttr {

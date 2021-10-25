@@ -70,7 +70,29 @@ public class StudentRepositoryWithJDBC implements StudentRepository {
 
   @Override
   public Student searchByCPF(CPF cpf) {
-    // TODO Auto-generated method stub
-    return null;
+    try {
+      String sql = "SELECT id, name, cpf, email FROM STUDENTS WHERE CPF = ? LIMIT 1";
+      PreparedStatement ps = connection.prepareStatement(sql);
+
+      ps.setString(1, cpf.getNumber());
+      ResultSet result = ps.executeQuery();
+
+      Boolean didFoundStudent = result.next();
+      if (!didFoundStudent) {
+        throw new StudentNotFoundException(cpf);
+      }
+
+      Student student = new StudentFactory()
+          .withNameCPFEmail(result.getString("name"), cpf.getNumber(), result.getString("email")).create();
+
+      Long id = result.getLong("id");
+
+      student = setStudentPhones(id, student);
+
+      return student;
+    } catch (SQLException e) {
+      throw new RuntimeException(e);
+    }
+  }
   }
 }

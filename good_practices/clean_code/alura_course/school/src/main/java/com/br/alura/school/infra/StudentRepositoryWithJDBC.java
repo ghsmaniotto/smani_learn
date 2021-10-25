@@ -4,11 +4,14 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ArrayList;
 import java.util.List;
 
 import com.br.alura.school.domain.student.CPF;
 import com.br.alura.school.domain.student.Phone;
 import com.br.alura.school.domain.student.Student;
+import com.br.alura.school.domain.student.StudentFactory;
+import com.br.alura.school.domain.student.StudentNotFoundException;
 import com.br.alura.school.domain.student.StudentRepository;
 
 public class StudentRepositoryWithJDBC implements StudentRepository {
@@ -94,5 +97,23 @@ public class StudentRepositoryWithJDBC implements StudentRepository {
       throw new RuntimeException(e);
     }
   }
+
+  private Student setStudentPhones(Long id, Student student) {
+    try {
+      String sql = "SELECT ddd, number FROM PHONES WHERE STUDENT_ID = ?";
+      PreparedStatement ps = this.connection.prepareStatement(sql);
+      ps.setLong(1, id);
+
+      ResultSet phoneResult = ps.executeQuery();
+
+      while (phoneResult.next()) {
+        student.addPhone(phoneResult.getString("ddd"), phoneResult.getString("number"));
+      }
+
+      return student;
+
+    } catch (SQLException e) {
+      throw new RuntimeException(e);
+    }
   }
 }

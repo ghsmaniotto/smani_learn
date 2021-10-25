@@ -41,11 +41,31 @@ public class StudentRepositoryWithJDBC implements StudentRepository {
       throw new RuntimeException(e);
     }
   }
-  
+
   @Override
   public List<Student> listAllRegisteredStudents() {
-    // TODO Auto-generated method stub
-    return null;
+    try {
+      String sql = "SELECT id, name, cpf, email FROM STUDENTS";
+      PreparedStatement ps = connection.prepareStatement(sql);
+      ResultSet result = ps.getResultSet();
+
+      List<Student> students = new ArrayList<Student>();
+
+      while (result.next()) {
+        Student student = new StudentFactory()
+            .withNameCPFEmail(result.getString("name"), result.getString("cpf"), result.getString("email")).create();
+
+        Long id = result.getLong("id");
+
+        student = setStudentPhones(id, student);
+
+        students.add(student);
+      }
+
+      return students;
+    } catch (SQLException e) {
+      throw new RuntimeException(e);
+    }
   }
 
   @Override

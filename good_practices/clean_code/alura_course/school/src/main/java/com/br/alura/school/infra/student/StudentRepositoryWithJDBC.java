@@ -1,4 +1,4 @@
-package com.br.alura.school.infra;
+package com.br.alura.school.infra.student;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;

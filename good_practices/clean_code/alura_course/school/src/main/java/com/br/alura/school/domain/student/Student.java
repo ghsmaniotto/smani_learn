@@ -17,6 +17,8 @@ public class Student {
   
   private List<Phone> phones = new ArrayList<Phone>();
 
+  private String password;
+
   public void addPhone(String ddd, String number){
     this.phones.add(new Phone(ddd, number));
   }

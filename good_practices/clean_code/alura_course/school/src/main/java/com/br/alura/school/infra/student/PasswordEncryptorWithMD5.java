@@ -26,5 +26,5 @@ public class PasswordEncryptorWithMD5 implements PasswordEncryptor {
   public Boolean validateEncryptedPassword(String encryptedPassword, String password) {
     return encryptedPassword.equals(encryptPassword(password));
   }
-  
+
 }

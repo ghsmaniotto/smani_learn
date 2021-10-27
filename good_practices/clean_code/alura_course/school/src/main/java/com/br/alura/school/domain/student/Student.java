@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Student {
-    
+
   public Student(String name, CPF cpf, Email email) {
     this.name = name;
     this.cpf = cpf;
@@ -14,28 +14,28 @@ public class Student {
   private String name;
   private CPF cpf;
   private Email email;
-  
+
   private List<Phone> phones = new ArrayList<Phone>();
 
   private String password;
 
-  public void addPhone(String ddd, String number){
+  public void addPhone(String ddd, String number) {
     this.phones.add(new Phone(ddd, number));
   }
 
-  public String getName(){
+  public String getName() {
     return this.name;
   }
 
-  public String getCpf(){
+  public String getCpf() {
     return this.cpf.getNumber();
   }
 
-  public String getEmail(){
+  public String getEmail() {
     return this.email.getAddreess();
   }
 
-  public List<Phone> getPhones(){
+  public List<Phone> getPhones() {
     return this.phones;
   }
 }

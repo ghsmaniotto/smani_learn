@@ -9,5 +9,5 @@ public interface StudentRepository {
   Student searchByCPF(CPF cpf);
 
   List<Student> listAllRegisteredStudents();
-  
+
 }

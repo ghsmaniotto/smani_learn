@@ -7,14 +7,14 @@ public class RegisterStudent {
 
   private final StudentRepository repository;
 
-  public RegisterStudent(StudentRepository repository){
+  public RegisterStudent(StudentRepository repository) {
     this.repository = repository;
   }
 
-  public void register(RegisterStudentDTO data){
+  public void register(RegisterStudentDTO data) {
     Student newStudent = data.createStudent();
 
     this.repository.register(newStudent);
   }
-  
+
 }

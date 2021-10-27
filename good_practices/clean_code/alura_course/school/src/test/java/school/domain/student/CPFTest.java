@@ -24,7 +24,7 @@ class CPFTest {
     final String validCpf = "123.123.123-12";
 
     assertDoesNotThrow(() -> new CPF(validCpf));
-    
+
     assertEquals(new CPF(validCpf).getNumber(), validCpf);
   }
 }

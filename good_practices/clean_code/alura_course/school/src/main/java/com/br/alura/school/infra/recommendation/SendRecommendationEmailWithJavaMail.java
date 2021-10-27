@@ -9,5 +9,5 @@ public class SendRecommendationEmailWithJavaMail implements SendEmailRecommendat
   public void sentTo(Student student) {
     // Send email using Java Mail package
   }
-  
+
 }

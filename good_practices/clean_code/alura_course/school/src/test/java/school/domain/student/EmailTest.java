@@ -22,7 +22,7 @@ class EmailTest {
     final String validEmail = "valid@email.com";
 
     assertDoesNotThrow(() -> new Email(validEmail));
-    
+
     assertEquals(new Email(validEmail).getAddreess(), validEmail);
   }
 }

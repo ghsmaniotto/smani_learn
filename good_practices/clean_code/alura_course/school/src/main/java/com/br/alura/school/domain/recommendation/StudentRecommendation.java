@@ -10,7 +10,7 @@ public class StudentRecommendation {
   private Student whoIndicate;
   private LocalDateTime createdAt;
 
-  public StudentRecommendation(Student indicated, Student whoIndicate){
+  public StudentRecommendation(Student indicated, Student whoIndicate) {
     this.indicated = indicated;
     this.whoIndicate = whoIndicate;
     this.createdAt = LocalDateTime.now();
@@ -26,5 +26,5 @@ public class StudentRecommendation {
 
   public LocalDateTime getCreatedAt() {
     return createdAt;
-  }  
+  }
 }

@@ -6,7 +6,6 @@ import com.br.alura.school.application.student.registration.RegisterStudent;
 import com.br.alura.school.application.student.registration.RegisterStudentDTO;
 import com.br.alura.school.domain.student.CPF;
 import com.br.alura.school.domain.student.Student;
-import com.br.alura.school.domain.student.StudentRepository;
 import com.br.alura.school.infra.student.StudentRepositoryInMemory;
 
 import org.junit.jupiter.api.Test;

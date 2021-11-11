@@ -19,8 +19,8 @@ public class StudentRepositoryInMemory implements StudentRepository {
 
   @Override
   public Student searchByCPF(CPF cpf) {
-    return this.registeredStudents.stream().filter(student -> student.getCpf().equals(cpf.getNumber())).findFirst()
-        .orElseThrow(() -> new StudentNotFoundException(cpf));
+    return this.registeredStudents.stream().filter(student -> student.getCpf().getNumber().equals(cpf.getNumber()))
+        .findFirst().orElseThrow(() -> new StudentNotFoundException(cpf));
   }
 
   @Override

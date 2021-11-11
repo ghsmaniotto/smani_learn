@@ -30,8 +30,8 @@ public class Student {
     return this.name;
   }
 
-  public String getCpf() {
-    return this.cpf.getNumber();
+  public CPF getCpf() {
+    return this.cpf;
   }
 
   public String getEmail() {

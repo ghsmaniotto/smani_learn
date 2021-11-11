@@ -15,4 +15,8 @@ public class CPF {
     return this.number;
   }
 
+  @Override
+  public String toString() {
+    return this.number;
+  }
 }

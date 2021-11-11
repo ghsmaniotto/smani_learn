@@ -20,6 +20,9 @@ public class Student {
   private String password;
 
   public void addPhone(String ddd, String number) {
+    if (this.phones.size() >= 2) {
+      throw new TooManyPhonesException();
+    }
     this.phones.add(new Phone(ddd, number));
   }
 

@@ -4,6 +4,7 @@ import java.time.LocalDateTime;
 
 import com.br.alura.school.shared.domain.CPF;
 import com.br.alura.school.shared.domain.event.Event;
+import com.br.alura.school.shared.domain.event.EventType;
 
 public class RegisteredStudent implements Event {
 
@@ -22,6 +23,11 @@ public class RegisteredStudent implements Event {
 
   public CPF getStudentCPF() {
     return this.studentCPF;
+  }
+
+  @Override
+  public EventType type() {
+    return EventType.REGISTERD_STUDENT;
   }
 
 }

@@ -4,10 +4,10 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 
 import com.br.alura.school.academic.application.student.registration.RegisterStudent;
 import com.br.alura.school.academic.application.student.registration.RegisterStudentDTO;
-import com.br.alura.school.academic.domain.EventPublisher;
 import com.br.alura.school.academic.domain.student.Student;
 import com.br.alura.school.academic.infra.student.StudentRepositoryInMemory;
 import com.br.alura.school.shared.domain.CPF;
+import com.br.alura.school.shared.domain.event.EventPublisher;
 
 import org.junit.jupiter.api.Test;
 

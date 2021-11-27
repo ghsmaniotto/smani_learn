@@ -2,8 +2,8 @@ package com.br.alura.school.academic.domain.student;
 
 import java.time.format.DateTimeFormatter;
 
-import com.br.alura.school.academic.domain.Event;
-import com.br.alura.school.academic.domain.Listener;
+import com.br.alura.school.shared.domain.event.Event;
+import com.br.alura.school.shared.domain.event.Listener;
 
 public class RegisteredStudentLog extends Listener {
 

@@ -1,9 +1,9 @@
 package com.br.alura.school.academic.application.student.registration;
 
-import com.br.alura.school.academic.domain.EventPublisher;
 import com.br.alura.school.academic.domain.student.RegisteredStudent;
 import com.br.alura.school.academic.domain.student.Student;
 import com.br.alura.school.academic.domain.student.StudentRepository;
+import com.br.alura.school.shared.domain.event.EventPublisher;
 
 public class RegisterStudent {
 

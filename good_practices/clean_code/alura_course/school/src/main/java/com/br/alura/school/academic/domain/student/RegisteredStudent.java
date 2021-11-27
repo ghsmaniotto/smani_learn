@@ -2,8 +2,8 @@ package com.br.alura.school.academic.domain.student;
 
 import java.time.LocalDateTime;
 
-import com.br.alura.school.academic.domain.Event;
 import com.br.alura.school.shared.domain.CPF;
+import com.br.alura.school.shared.domain.event.Event;
 
 public class RegisteredStudent implements Event {
 

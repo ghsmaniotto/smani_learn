@@ -1,4 +1,4 @@
-package com.br.alura.school.gamification.infra;
+package com.br.alura.school.gamification.infra.stamp;
 
 import java.util.ArrayList;
 import java.util.List;

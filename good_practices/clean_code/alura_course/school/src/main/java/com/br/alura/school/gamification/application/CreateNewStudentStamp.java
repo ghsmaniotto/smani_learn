@@ -7,11 +7,11 @@ import com.br.alura.school.shared.domain.event.Event;
 import com.br.alura.school.shared.domain.event.EventType;
 import com.br.alura.school.shared.domain.event.Listener;
 
-public class CrateNewStudentStamp extends Listener {
+public class CreateNewStudentStamp extends Listener {
 
   private final StampRepository repository;
 
-  public CrateNewStudentStamp(StampRepository repository) {
+  public CreateNewStudentStamp(StampRepository repository){
     this.repository = repository;
   }
 

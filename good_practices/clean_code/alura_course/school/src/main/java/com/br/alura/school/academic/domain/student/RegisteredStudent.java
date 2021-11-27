@@ -1,6 +1,7 @@
 package com.br.alura.school.academic.domain.student;
 
 import java.time.LocalDateTime;
+import java.util.Map;
 
 import com.br.alura.school.shared.domain.CPF;
 import com.br.alura.school.shared.domain.event.Event;
@@ -28,6 +29,11 @@ public class RegisteredStudent implements Event {
   @Override
   public EventType type() {
     return EventType.REGISTERD_STUDENT;
+  }
+
+  @Override
+  public Map<String, Object> data() {
+    return Map.of("cpf", studentCPF);
   }
 
 }

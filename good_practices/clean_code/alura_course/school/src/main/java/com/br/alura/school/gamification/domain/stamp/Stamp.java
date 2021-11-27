@@ -1,4 +1,4 @@
-package com.br.alura.school.gamification.domain;
+package com.br.alura.school.gamification.domain.stamp;
 
 import com.br.alura.school.academic.domain.student.CPF;
 

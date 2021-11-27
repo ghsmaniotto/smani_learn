@@ -1,4 +1,4 @@
-package com.br.alura.school.academic.domain.student;
+package com.br.alura.school.shared.domain;
 
 public class CPF {
   private String number;

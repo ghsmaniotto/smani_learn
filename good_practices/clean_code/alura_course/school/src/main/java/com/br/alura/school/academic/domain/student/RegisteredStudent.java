@@ -3,6 +3,7 @@ package com.br.alura.school.academic.domain.student;
 import java.time.LocalDateTime;
 
 import com.br.alura.school.academic.domain.Event;
+import com.br.alura.school.shared.domain.CPF;
 
 public class RegisteredStudent implements Event {
 

@@ -3,6 +3,8 @@ package com.br.alura.school.academic.domain.student;
 import java.util.ArrayList;
 import java.util.List;
 
+import com.br.alura.school.shared.domain.CPF;
+
 public class Student {
 
   public Student(String name, CPF cpf, Email email) {

@@ -1,5 +1,7 @@
 package com.br.alura.school.academic.domain.student;
 
+import com.br.alura.school.shared.domain.CPF;
+
 public class StudentFactory {
 
   private Student student;

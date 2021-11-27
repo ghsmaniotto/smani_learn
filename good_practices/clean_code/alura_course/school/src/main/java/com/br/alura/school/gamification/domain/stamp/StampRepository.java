@@ -2,7 +2,7 @@ package com.br.alura.school.gamification.domain.stamp;
 
 import java.util.List;
 
-import com.br.alura.school.academic.domain.student.CPF;
+import com.br.alura.school.shared.domain.CPF;
 
 public interface StampRepository {
 

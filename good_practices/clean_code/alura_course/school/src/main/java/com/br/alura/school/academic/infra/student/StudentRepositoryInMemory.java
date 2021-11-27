@@ -3,10 +3,10 @@ package com.br.alura.school.academic.infra.student;
 import java.util.ArrayList;
 import java.util.List;
 
-import com.br.alura.school.academic.domain.student.CPF;
 import com.br.alura.school.academic.domain.student.Student;
 import com.br.alura.school.academic.domain.student.StudentNotFoundException;
 import com.br.alura.school.academic.domain.student.StudentRepository;
+import com.br.alura.school.shared.domain.CPF;
 
 public class StudentRepositoryInMemory implements StudentRepository {
 

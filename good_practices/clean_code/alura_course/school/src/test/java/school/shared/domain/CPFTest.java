@@ -1,8 +1,8 @@
-package school.academic.domain.student;
+package school.shared.domain;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-import com.br.alura.school.academic.domain.student.CPF;
+import com.br.alura.school.shared.domain.CPF;
 
 import org.junit.jupiter.api.Test;
 

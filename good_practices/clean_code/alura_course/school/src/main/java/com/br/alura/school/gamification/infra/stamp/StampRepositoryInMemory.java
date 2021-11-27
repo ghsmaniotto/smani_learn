@@ -4,9 +4,9 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
 
-import com.br.alura.school.academic.domain.student.CPF;
 import com.br.alura.school.gamification.domain.stamp.Stamp;
 import com.br.alura.school.gamification.domain.stamp.StampRepository;
+import com.br.alura.school.shared.domain.CPF;
 
 public class StampRepositoryInMemory implements StampRepository {
 

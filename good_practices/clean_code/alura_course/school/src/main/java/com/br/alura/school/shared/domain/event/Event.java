@@ -5,5 +5,6 @@ import java.time.LocalDateTime;
 public interface Event {
 
   LocalDateTime moment();
+  EventType type();
 
 }

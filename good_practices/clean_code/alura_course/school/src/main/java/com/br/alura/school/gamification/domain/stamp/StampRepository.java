@@ -6,7 +6,7 @@ import com.br.alura.school.shared.domain.CPF;
 
 public interface StampRepository {
 
-  void register(Stamp stamp);
+  void store(Stamp stamp);
 
   List<Stamp> listStudentStamps(CPF cpf);
 

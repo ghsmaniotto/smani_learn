@@ -20,7 +20,7 @@ public class StampRepositoryInMemory implements StampRepository {
   }
 
   @Override
-  public void register(Stamp stamp) {
+  public void store(Stamp stamp) {
     this.stamps.add(stamp);
   }
   
